@@ -1,0 +1,14 @@
+package controller;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.text.Text;
+ 
+public class HomeController {
+    @FXML private Text textarea1;
+    
+    @FXML protected void search(ActionEvent event) {
+        textarea1.setText("Sign in button pressed");
+    }
+
+}

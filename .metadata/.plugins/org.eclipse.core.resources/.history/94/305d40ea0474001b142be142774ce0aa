@@ -1,0 +1,40 @@
+package controller;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
+ 
+public class MyController {
+    @FXML private TextField textarea1;
+    @FXML private Label lbl;
+    @FXML ImageView img;
+    @FXML protected void search(ActionEvent event) {
+        String t = textarea1.getText();
+        lbl.setText(t);
+          
+        
+        //Setting Axis of rotation   
+        img.setAxis(Rotate.Z_AXIS);  
+          
+        // setting the angle of rotation   
+        img.setByAngle(360);  
+          
+        //setting cycle count of the rotation   
+        img.setCycleCount(500);  
+          
+        //Setting duration of the transition   
+        img.setDuration(Duration.millis(1000));  
+          
+        //the transition will be auto reversed by setting this to true   
+        img.setAutoReverse(true);  
+        img.setNode(img);  
+        
+        //playing the transition   
+        img.play();  
+    }
+
+}

@@ -1,0 +1,17 @@
+package controller;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+ 
+public class MyController {
+    @FXML private TextField textarea1;
+    
+    @FXML protected void search(ActionEvent event) {
+        String t = textarea1.getText();
+        System.out.println(t);
+    }
+
+}
