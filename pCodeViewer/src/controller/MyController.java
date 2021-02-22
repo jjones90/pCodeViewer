@@ -32,7 +32,7 @@ public class MyController {
     
     
     @FXML protected void updateText(Event event) {
-    	String output = Main.pcodes.search(textarea1.getText()); //possibly move to updateModel functon
+    	String output = Main.pcodes.search(textarea1.getText()); //possibly move to updateModel function
     	ouputText.setText(output);
     }
 
