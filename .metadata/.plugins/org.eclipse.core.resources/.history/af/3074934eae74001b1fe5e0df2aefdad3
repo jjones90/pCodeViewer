@@ -24,7 +24,6 @@ public class MyController {
     @FXML private TextArea ouputText;
     private File file = new File("src/pcodes.csv");
     private ArrayList<String> pCodes = new ArrayList<>();
-    
     @FXML void initialize () {
     	readPcodes();
     }
@@ -33,30 +32,47 @@ public class MyController {
     	try {
 			Scanner in = new Scanner(file);
 			String line = "";
+			String output2 = "";
 			while (in.hasNext()) {
 				line = in.nextLine();
 				pCodes.add(line);
+				
 			    System.out.println("Readling line: " + line);
 			}
 			in.close();
 		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }
     
     @FXML protected void search(Event event) {
         String input = textarea1.getText();
-        String returnString = "";
-        for(String code : pCodes) {
-        	Scanner sc = new Scanner(code);
-        	sc.useDelimiter(",");
-        	String pcode = sc.next();
-        	String dsc = sc.next();
-        	if(pcode.equals(input)) {
-        		returnString += pcode + " " + dsc + "\n";
-        	} 
-        }
-        ouputText.setText(returnString);
+        
+     
+        try {
+			Scanner in = new Scanner(file);
+			String line = "";
+			String output2 = "";
+			while (in.hasNext()) {
+				line = in.nextLine();
+				Scanner inner = new Scanner(line);
+				inner.useDelimiter(",");
+				String code = inner.next();
+				String desc = inner.next();
+				if(code.equals(input)) {
+					output2 += code + " " + desc + "\n";
+				}
+				
+				ouputText.setText(output2);
+			    System.out.println(output2);
+			}
+			in.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+       
     }
 
 }

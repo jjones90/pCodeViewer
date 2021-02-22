@@ -52,9 +52,9 @@ public class MyController {
         	sc.useDelimiter(",");
         	String pcode = sc.next();
         	String dsc = sc.next();
-        	if(pcode.equals(input)) {
+        	if(pcode.contains(input)) {
         		returnString += pcode + " " + dsc + "\n";
-        	} 
+        	}
         }
         ouputText.setText(returnString);
     }

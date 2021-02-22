@@ -395,9 +395,9 @@ P0393,Camshaft Position Sensor B Circuit High Input (Bank 2)
 P0394,Camshaft Position Sensor B Circuit Intermittent (Bank 2)
 P0395,Camshaft Position Sensor B Circuit High Input (Bank 2)
 P0396,Camshaft Position Sensor B Circuit Intermittent (Bank 2)
-P0397,Not used
-P0398,Not used
-P0399,Not used
+P0397
+P0398
+P0399
 P0400,Exhaust Gas Recirculation Flow Malfunction
 P0401,Exhaust Gas Recirculation Flow Insufficient Detected
 P0402,Exhaust Gas Recirculation Flow Excessive Detected
