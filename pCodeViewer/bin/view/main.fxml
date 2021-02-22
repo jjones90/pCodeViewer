@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyController">
    <children>
-      <TextField fx:id="textarea1" layoutX="229.0" layoutY="52.0" onKeyPressed="#search" promptText="Enter P Code.." />
+      <TextField fx:id="textarea1" layoutX="229.0" layoutY="52.0" onKeyPressed="#updateText" promptText="Enter P Code.." />
       <Label fx:id="lbl" layoutX="168.0" layoutY="55.0" text="P Code:">
          <font>
             <Font name="Cambria" size="15.0" />
