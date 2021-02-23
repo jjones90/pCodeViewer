@@ -24,7 +24,7 @@ public class Main extends Application {
 		    
 	        Scene scene = new Scene(root);
 	    
-	        primaryStage.setTitle("FXML Welcome");
+	        primaryStage.setTitle("Elifs label program");
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
 		} catch(Exception e) {

@@ -25,7 +25,6 @@ public class MyController {
     @FXML private TextArea ouputText;
     
     
-    
     @FXML void initialize () {
     	
     }
